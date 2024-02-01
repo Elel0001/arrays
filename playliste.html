@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array (frugtliste)</title>
+</head>
+
+<body>
+    <h1>Playliste</h1>
+    <ul></ul>
+
+    <script>
+        const musiknumre = ["Despacito", "Stamp on the ground", "Waka Waka", "Shivers", "Laced up", "Calma - remix", "Stor mand", "Me Gusta", "Oslo til København", "Hun kommer tilbage"];
+        const ul = document.querySelector("ul");
+        // ul i const kunne være skiftet ud med en #id
+
+        musiknumre.forEach(bygListe);
+
+        function bygListe(numre) {
+            console.log(numre)
+            ul.innerHTML += "<li>" + numre + "</li>"
+        }
+
+    </script>
+</body>
+
+</html>

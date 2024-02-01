@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array (frugtliste)</title>
+</head>
+
+<body>
+    <h1>Mit yndlingsband</h1>
+    <article>
+        <h2></h2>
+        <p></p>
+        <img src="" alt="">
+    </article>
+
+    <script>
+        const yndlingsBand = {
+            navn: "5 seconds of summer",
+            dannet: "2010",
+            albums: ["Sidste sommer", "Næste jul", 5],
+            medlemmer: ["Peter", "Jytte", "Niles"],
+            billede: "5seconds.jpg"
+        }
+
+        const p = document.querySelector("p");
+        const h2 = document.querySelector("h2");
+        const img = document.querySelector("img");
+
+        // p.textContent = yndlingsBand.navn;
+        h2.textContent = "Mit yndlingsband er: " + yndlingsBand.navn;
+        p.textContent += "Det er dannet i: " + yndlingsBand.dannet;
+        img.src = yndlingsBand.billede
+        img.alt = "5 seconds of summer"
+        p.textContent += ". Medlemmer er: " + yndlingsBand.medlemmer;
+        p.textContent += ". Forsanger er: " + yndlingsBand.medlemmer[0];
+        p.textContent += ". Basist er: " + yndlingsBand.medlemmer[1] + " og " + yndlingsBand.medlemmer[2];
+
+    </script>
+</body>
+
+</html>

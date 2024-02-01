@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array (frugtliste)</title>
+</head>
+
+<body>
+    <h1>Min liste</h1>
+    <ul></ul>
+
+    <script>
+        const frugter = ["banan", "æble", "appelsin", "grape"];
+        const ul = document.querySelector("ul");
+
+        frugter.forEach(bygListe);
+        // forEach (for hvert element i dette array) sætter en frugt ned ad gangen
+
+        // function bygListe(frugt, index) {
+        // console.log(index)
+        // ul.innerHTML += "<li>" + frugt + "</li>"
+        function bygListe(frugt) {
+            console.log(frugt)
+            ul.innerHTML += "<li>" + frugt + "</li>"
+        }
+        // "frugt" er en intern variabel
+        // hvis der tilføjes (frugt, index) kan der i consollen vises hvad nr. elementet er
+        // += gør at der tilføjes flere frugter (alle på listen), uden + vil den blot tage den sidste
+        // InnerHTML (når der er mere end bare tekst) vs. textcontent
+
+    </script>
+</body>
+
+</html>
