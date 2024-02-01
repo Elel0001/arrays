@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array af objekter</title>
+    <style>
+        img {
+            width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bands</h1>
+    <main></main>
+    <template>
+        <article>
+            <h2></h2>
+            <p></p>
+            <img src="" alt="">
+        </article>
+    </template>
+    <!-- template: en skabelon man vil genbruge -->
+
+    <script>
+        const bands = [
+            {
+                navn: "På slaget 12",
+                dannet: "2005",
+                albums: ["Sommer og sol", "hallelulja", "Trommens slag"],
+                medlemmer: ["Bendt", "Ulla", "Anita"],
+                billede: "slaget12.jpg",
+            },
+
+            {
+                navn: "Rammstein",
+                dannet: "2001",
+                albums: ["Hard rock", "Rosenrot",],
+                medlemmer: ["Jens", "Hans", "Rolff"],
+                billede: "Rammstein.jpg"
+            },
+
+            {
+                navn: "Aqua",
+                dannet: "1992",
+                albums: ["Back to the 80's", "Aquarium", "Barbie girl"],
+                medlemmer: ["Søren", "René", "Lene"],
+                billede: "Aqua.jpg"
+            },
+        ]
+
+        const skabelon = document.querySelector("template").content;
+
+        bands.forEach(visBands);
+
+        function visBands(band) {
+            const klon = skabelon.cloneNode(true);
+            console.log(band);
+            // Har lavet et stempel som kan klones
+
+            klon.querySelector("h2").textContent = "Navn : " + band.navn;
+            klon.querySelector("p").textContent += "medlemmer: " + band.medlemmer;
+            klon.querySelector("img").src = band.billede;
+            klon.querySelector("img").alt = band.navn;
+            const beholder = document.querySelector("main");
+            beholder.appendChild(klon);
+
+        }
+
+    </script>
+</body>
+
+</html>
